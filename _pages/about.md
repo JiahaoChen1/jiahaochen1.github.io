@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Jiahao Chen, a first 2nd year PhD student at Renmin University of China. I got my bachelor degree and master degree in Harbin Institute of Technology. My research interests are focused on Long-tailed learning, Representation Learning, and their application.
+Hi, I’m Jiahao Chen, a 2nd year PhD student at Renmin University of China. I got my bachelor degree and master degree in Harbin Institute of Technology. My research interests are focused on Long-tailed learning, Representation Learning, and their application.
 
 A data-driven personal website
 ======
