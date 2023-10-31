@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Jiahao Chen"
-  avatar           : "./images/profile.png"
+  avatar           : "yz.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Location"
   employer         :
