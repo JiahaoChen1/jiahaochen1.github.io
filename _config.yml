@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jiahao Chen's homgpage"
+title                    : "Jiahao Chen's homepage"
 title_separator          : "-"
 name                     : &name "Jiahao Chen"
 description              : &description "personal description"
@@ -86,7 +86,7 @@ author:
   location         : "Shijiazhuang, China"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com.hk/citations?user=Af4IREwAAAAJ&hl=zh-CN"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
