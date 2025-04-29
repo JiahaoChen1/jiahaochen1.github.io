@@ -8,10 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Jiahao Chen, a 2nd year PhD student at Renmin University of China. I got my bachelor degree and master degree in Harbin Institute of Technology. My research interests are focused on Long-tailed learning, Representation Learning, and their application.
+Hi, I’m Jiahao Chen, a 3nd year PhD student at Renmin University of China. I got my bachelor degree and master degree in Harbin Institute of Technology. My research interests are focused on Long-tailed learning, Representation Learning, and their application.
 
 Publications 
 ======
+- Yurou Liu, **Jiahao Chen**, Rui Jiao, Jiangmeng Li, Wenbing Huang, Bing Su. DenoiseVAE: Learning Molecule-Adaptive Noise Distributions for Denoising-based 3D Molecular Pre-training (ICLR), 2025, [paper](https://openreview.net/forum?id=ym7pr83XQr)
 - **Jiahao Chen**, Bing Su. Instance-specific Semantic Augmentation for Long-tailed Image Classification (IEEE Transactions on Image Processing), 2024, [paper](https://ieeexplore.ieee.org/abstract/document/10480367)
 - Jiexin Wang, **Jiahao Chen**, Bing Su. Domain-adaptive and Subgroup-specific Cascaded Temperature Regression for Out-of-distribution Calibration (ICASSP), 2024, [paper](https://arxiv.org/abs/2402.09204)
 - **Jiahao Chen**, Bing Su. Transfer Knowledge from Head to Tail: Uncertainty Calibration under Long-tailed Distribution (CVPR), 2023, [paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Chen_Transfer_Knowledge_From_Head_to_Tail_Uncertainty_Calibration_Under_Long-Tailed_CVPR_2023_paper.pdf)
@@ -20,4 +21,8 @@ Publications
 
 Service
 ======
-- CVPR 2024, Reviewer
+- CVPR 2024, 2025 Reviewer
+- Neurips 2024, Reviewer
+- ICLR 2025, Reviewer
+- ICML 2025, Reviewer
+- ICCV 2025, Reviewer
