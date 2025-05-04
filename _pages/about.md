@@ -13,7 +13,7 @@ Hi, I’m Jiahao Chen, a 3nd year PhD student at Renmin University of China. I g
 Publications 
 ======
 - **Jiahao Chen**, Bin Qin, Jiangmeng Li, Hao Chen, Bing Su. Rethinking the Bias of Foundation Model under Long-tailed Distribution (ICML), 2025, [paper](https://arxiv.org/abs/2501.15955)
--Zhao Yang, Bing Su, **Jiahao Chen**, Ji-Rong Wen. Interpretable Enzyme Function Prediction via Residue-Level Detection, (ICLR workshop), [paper](https://openreview.net/forum?id=JCRUhub2bj&referrer=%5Bthe%20profile%20of%20Jiahao%20Chen%5D(%2Fprofile%3Fid%3D~Jiahao_Chen4))
+- Zhao Yang, Bing Su, **Jiahao Chen**, Ji-Rong Wen. Interpretable Enzyme Function Prediction via Residue-Level Detection, (ICLR workshop), [paper](https://openreview.net/forum?id=JCRUhub2bj&referrer=%5Bthe%20profile%20of%20Jiahao%20Chen%5D(%2Fprofile%3Fid%3D~Jiahao_Chen4))
 - Yurou Liu, **Jiahao Chen**, Rui Jiao, Jiangmeng Li, Wenbing Huang, Bing Su. DenoiseVAE: Learning Molecule-Adaptive Noise Distributions for Denoising-based 3D Molecular Pre-training (ICLR), 2025, [paper](https://openreview.net/forum?id=ym7pr83XQr)
 - **Jiahao Chen**, Bing Su. Instance-specific Semantic Augmentation for Long-tailed Image Classification (IEEE Transactions on Image Processing), 2024, [paper](https://ieeexplore.ieee.org/abstract/document/10480367)
 - Jiexin Wang, **Jiahao Chen**, Bing Su. Domain-adaptive and Subgroup-specific Cascaded Temperature Regression for Out-of-distribution Calibration (ICASSP), 2024, [paper](https://arxiv.org/abs/2402.09204)
