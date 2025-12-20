@@ -49,10 +49,23 @@
 }
 
 .page__content {
-
+  
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  
+  ul {
+    li {
+      margin-bottom: 0.8em;
+      line-height: 1.7;
+    }
   }
 
   p, li, dl {
@@ -415,43 +428,39 @@
 }
 
 .publications-list {
-  margin-top: 2em;
+  margin-top: 1em;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: publication-counter;
   
-  h3 {
-    margin-top: 2em;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid $border-color;
-    font-size: $type-size-4;
-    color: $darker-gray;
+  > li {
+    counter-increment: publication-counter;
+    margin-bottom: 1.5em;
+    padding-left: 2.5em;
+    position: relative;
+    list-style: none;
     
-    &:first-child {
-      margin-top: 0;
+    &::before {
+      content: counter(publication-counter) ".";
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      color: $darker-gray;
+      font-size: 1.1em;
     }
   }
 }
 
 .publication-item {
-  margin-bottom: 1.5em;
-  padding: 1.2em;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border-left: 4px solid $info-color;
-  border-radius: $border-radius;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-left-color: darken($info-color, 10%);
-  }
+  margin-bottom: 0;
+  padding: 0;
   
   .publication-content {
-    line-height: 1.7;
+    line-height: 1.8;
     color: $text-color;
     
     .publication-authors {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
       line-height: 1.6;
       
       strong {
@@ -461,59 +470,38 @@
     }
     
     .publication-title {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
       line-height: 1.6;
       
       em {
-        color: $dark-gray;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.05em;
+        color: $text-color;
+        font-style: italic;
+        font-weight: normal;
       }
     }
     
     .publication-venue {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
       line-height: 1.6;
       
-      strong {
-        color: $info-color;
-        font-weight: 600;
+      em {
+        color: $dark-gray;
+        font-style: italic;
       }
-    }
-    
-    strong {
-      color: $darker-gray;
-      font-weight: 600;
-    }
-    
-    em {
-      color: $dark-gray;
-      font-style: normal;
-      font-weight: 500;
     }
   }
   
   .publication-links {
-    margin-top: 0.8em;
-    padding-top: 0.8em;
-    border-top: 1px solid $lighter-gray;
+    margin-top: 0.3em;
     
     a {
-      display: inline-block;
-      margin-right: 1em;
-      padding: 0.4em 0.8em;
-      background: $info-color;
-      color: #fff;
+      color: $link-color;
       text-decoration: none;
-      border-radius: $border-radius;
       font-size: $type-size-6;
-      transition: all 0.2s ease;
       
       &:hover {
-        background: darken($info-color, 10%);
-        transform: scale(1.05);
-        box-shadow: 0 2px 6px rgba($info-color, 0.3);
+        color: $link-color-hover;
+        text-decoration: underline;
       }
     }
   }
