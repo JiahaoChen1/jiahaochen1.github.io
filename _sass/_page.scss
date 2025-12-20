@@ -450,6 +450,38 @@
     line-height: 1.7;
     color: $text-color;
     
+    .publication-authors {
+      margin-bottom: 0.5em;
+      line-height: 1.6;
+      
+      strong {
+        color: $darker-gray;
+        font-weight: 600;
+      }
+    }
+    
+    .publication-title {
+      margin-bottom: 0.5em;
+      line-height: 1.6;
+      
+      em {
+        color: $dark-gray;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.05em;
+      }
+    }
+    
+    .publication-venue {
+      margin-bottom: 0.5em;
+      line-height: 1.6;
+      
+      strong {
+        color: $info-color;
+        font-weight: 600;
+      }
+    }
+    
     strong {
       color: $darker-gray;
       font-weight: 600;
@@ -509,12 +541,14 @@
 /* Enhanced hero section */
 .page__hero--overlay {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 4em 0;
   
   .page__title {
     font-size: $type-size-1;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 0.5em;
+    color: #fff;
   }
   
   .page__lead {
@@ -523,22 +557,7 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .btn--light-outline {
-    margin-top: 1.5em;
-    padding: 0.8em 2em;
-    font-size: $type-size-5;
-    border: 2px solid #fff;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+    color: #fff;
   }
 }
 
