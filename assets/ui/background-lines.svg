@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+  <g stroke="#315f6b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 128h92l38 38h76l42-42h94" stroke-width="2"/>
+    <path d="M0 210h72l35-35" stroke-width="1.5"/>
+    <path d="M184 0v72l-28 28" stroke-width="1.5"/>
+    <circle cx="130" cy="166" r="7" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="248" cy="124" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="107" cy="175" r="4" fill="#315f6b" stroke="none"/>
+    <rect x="337" y="118" width="10" height="10" rx="2" fill="#315f6b" stroke="none"/>
+  </g>
+  <g stroke="#315f6b" stroke-width="1.5">
+    <path d="M116 285 174 251l58 34v68l-58 34-58-34Z"/>
+    <path d="m174 251 58 102M232 285 116 353M116 285l116 68"/>
+    <circle cx="116" cy="285" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="232" cy="285" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="116" cy="353" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="232" cy="353" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="174" cy="251" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="174" cy="387" r="6" fill="#eef5f4" stroke-width="2"/>
+    <circle cx="174" cy="319" r="9" fill="#315f6b" stroke="none"/>
+  </g>
+  <g stroke="#406f91" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1400 708h-92l-38-38h-76l-42 42h-94" stroke-width="2"/>
+    <path d="M1400 626h-72l-35 35" stroke-width="1.5"/>
+    <path d="M1216 900v-72l28-28" stroke-width="1.5"/>
+    <circle cx="1270" cy="670" r="7" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1152" cy="712" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1293" cy="661" r="4" fill="#406f91" stroke="none"/>
+    <rect x="1053" y="707" width="10" height="10" rx="2" fill="#406f91" stroke="none"/>
+  </g>
+  <g stroke="#406f91" stroke-width="1.5">
+    <path d="m1284 551-58 34-58-34v-68l58-34 58 34Z"/>
+    <path d="m1226 585-58-102m0 68 116-68m0 68-116-68"/>
+    <circle cx="1284" cy="551" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1168" cy="551" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1284" cy="483" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1168" cy="483" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1226" cy="585" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1226" cy="449" r="6" fill="#eaf2f7" stroke-width="2"/>
+    <circle cx="1226" cy="517" r="9" fill="#406f91" stroke="none"/>
+  </g>
+</svg>

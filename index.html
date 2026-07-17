@@ -13,33 +13,93 @@
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
-    line-height: 1.45;
-    color: #2E2E2E;
-    background-color: #50585F;
-    padding-top: 6px;
+    font-family: ui-rounded, "SF Pro Rounded", "Avenir Next", "Segoe UI", sans-serif;
+    line-height: 1.55;
+    color: #26363D;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(142, 191, 184, 0.72), transparent 27%),
+        radial-gradient(circle at 88% 20%, rgba(137, 178, 211, 0.7), transparent 29%),
+        linear-gradient(145deg, #E8ECE7 0%, #DDE9E8 52%, #D8E5EE 100%);
+    min-height: 100vh;
+    padding: 24px 14px;
+    cursor: url("assets/ui/cute-cursor.svg") 5 4, auto;
 }
 
- .container {
-     max-width: 1100px;
-     margin: 0 auto;
-     background-color: #FDF6E4;
-     padding-bottom: 20px;
- }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url("assets/ui/background-lines.svg") center / cover no-repeat;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+a {
+    cursor: url("assets/ui/cute-link-cursor.svg") 12 4, pointer;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #FFFDF9;
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 18px 55px rgba(52, 75, 87, 0.15);
+    padding-bottom: 24px;
+}
+
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px 0;
+}
+
+.language-toggle {
+    color: #204D59;
+    background: #FFFFFF;
+    border: 1px solid #86A7AD;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font: inherit;
+    font-size: 0.88em;
+    font-weight: 700;
+    box-shadow: 0 3px 9px rgba(46, 73, 84, 0.1);
+    cursor: url("assets/ui/cute-link-cursor.svg") 12 4, pointer;
+}
+
+.language-toggle:hover {
+    color: #FFFFFF;
+    background: #285F6B;
+}
+
+.lang-hidden {
+    display: none;
+}
 
 /* ================= Profile ================= */
 
 .profile {
     display: flex;
-    gap: 18px;
-    padding: 2em 28px 1em 28px;
+    gap: 26px;
+    align-items: center;
+    margin: 8px 20px 20px;
+    padding: 28px;
+    background: linear-gradient(135deg, #EAF3EF 0%, #E3EFF1 55%, #DFEBF3 100%);
+    border: 1px solid #C9DADB;
+    border-radius: 20px;
 }
 
 .profile-photo {
     width: 160px;
     height: 160px;
     object-fit: cover;
-    border-radius: 3px;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+    box-shadow: 0 10px 24px rgba(47, 76, 88, 0.17);
     flex-shrink: 0;
 }
 
@@ -48,41 +108,83 @@ body {
 }
 
 .name {
-    font-size: 1.3em;
-    margin-bottom: 0.3em;
+    color: #204D59;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55em;
+    font-weight: 700;
+    margin-bottom: 0.45em;
 }
 
 .profile-info p {
     font-size: 0.98em;
+    font-weight: 500;
     margin-bottom: 0.4em;
     text-align: justify;
 }
 
 .profile-info a {
-    color: #8C1515;
-    text-decoration: none;
+    color: #0B5B8C;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 }
 
 .profile-info a:hover {
-    color: #5C1515;
+    color: #063A5A;
 }
 
 /* ================= Sections ================= */
 
 .section {
-    padding: 0 28px;
+    margin: 0 20px 18px;
+    padding: 8px 18px 16px;
+}
+
+.section a {
+    color: #0B5B8C;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.section a:hover {
+    color: #063A5A;
 }
 
 h2 {
-    font-size: 1.15em;
-    margin: 10px 0 6px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    color: #204D59;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.28em;
+    margin: 10px 0 12px;
+}
+
+h2::before {
+    content: "✦";
+    color: #5F97A3;
+    font-family: sans-serif;
+    font-size: 0.82em;
 }
 
 h3 {
-    font-size: 0.95em;
-    color: #8D8E90;
-    margin: 12px 0 6px;
-    text-align: right;
+    color: #526970;
+    font-size: 0.88em;
+    letter-spacing: 0.04em;
+    margin: 16px 4px 8px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.collaboration {
+    margin-top: 4px;
+    padding: 13px 18px 17px;
+    background: linear-gradient(90deg, #E7F2ED, #E4EFF3);
+    border: 1px dashed #789EA1;
+    border-radius: 16px;
 }
 
 /* ================= Publications ================= */
@@ -93,10 +195,21 @@ h3 {
 
 .pub-item {
     display: flex;
-    gap: 12px;
+    gap: 18px;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #FFFFFF;
+    border: 1px solid #CCDADB;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(46, 73, 84, 0.09);
     font-size: 0.95em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(46, 73, 84, 0.11);
 }
 
 .pub-thumb {
@@ -109,11 +222,15 @@ h3 {
     justify-content: center;
 }
 
+.pub-thumb:empty {
+    display: none;
+}
+
 .pub-thumb img {
     width: 140px;
     height: auto;
     object-fit: contain;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .pub-content {
@@ -121,10 +238,14 @@ h3 {
 }
 
 .pub-title {
+    color: #203F4A;
+    font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
+    font-weight: 600;
 }
 
 .pub-authors {
+    color: #34474F;
     margin: 0.1em 0;
 }
 
@@ -132,48 +253,156 @@ h3 {
     display: flex;
     gap: 8px;
     align-items: center;
+    color: #52636A;
 }
 
- .pub-venue a {
-     color: #8C1515;
-     font-weight: 600;
-     text-decoration: none;
- }
+.pub-venue a {
+    display: inline-block;
+    color: #0B5B8C;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
 
 .pub-venue a:hover {
-    color: #5C1515;
+    color: #063A5A;
 }
 
- .author-bold {
+.author-bold {
      font-weight: 600;
  }
+
+/* ================= Education ================= */
+
+.education-list {
+    list-style: none;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 58px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    background: linear-gradient(90deg, #EEF4EF, #EAF2F3);
+    border: 1px solid #CAD9D6;
+    border-radius: 15px;
+    font-size: 0.95em;
+}
+
+.education-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    padding: 3px;
+    background: #FFFFFF;
+    border: 1px solid #DDE7E5;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(46, 73, 84, 0.1);
+}
+
+.education-logo.ruc-logo {
+    object-fit: cover;
+    padding: 0;
+}
+
+.education-school {
+    color: #213F49;
+    font-weight: 600;
+}
+
+.education-degree {
+    color: #4F6269;
+}
+
+.education-date {
+    color: #40575F;
+    font-weight: 600;
+    white-space: nowrap;
+}
 
 /* ================= Services ================= */
 
 .services p {
     font-size: 0.9em;
-    margin: 0.35em 0;
+    margin: 0.5em 0;
+    padding: 9px 13px;
+    background: #EAF2EF;
+    border-left: 3px solid #4F858C;
+    border-radius: 0 10px 10px 0;
 }
 
 /* ================= Footer ================= */
 
 footer {
+    color: #526970;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 24px;
     font-size: 0.85em;
 }
 
 /* ================= Mobile ================= */
 
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 18px;
+    }
+
     .profile {
         flex-direction: column;
         align-items: center;
+        margin: 10px;
+        padding: 22px 18px;
         text-align: center;
+    }
+
+    .profile-info p {
+        text-align: left;
+    }
+
+    .section {
+        margin: 0 10px 14px;
+        padding: 8px 10px 14px;
     }
 
     h3 {
         text-align: left;
+    }
+
+    .education-item {
+        grid-template-columns: 52px 1fr;
+    }
+
+    .education-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .education-date {
+        grid-column: 2;
+    }
+
+    .pub-item {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .pub-thumb,
+    .pub-thumb img {
+        width: 92px;
+        min-width: 92px;
+    }
+
+    .pub-venue {
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
 }
 </style>
@@ -182,63 +411,123 @@ footer {
 <body>
 <div class="container">
 
+<div class="language-switcher">
+    <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch to Chinese">中文</button>
+</div>
+
 <!-- ================= Profile ================= -->
 
 <div class="profile">
-    <img src="self.jpg" class="profile-photo" onerror="this.style.display='none'">
+    <img src="assets/images/profile/self.jpg" class="profile-photo" onerror="this.style.display='none'">
     <div class="profile-info">
         <p class="name">Jiahao Chen（陈嘉浩）</p>
-        <p>
-            I am a 4th-year PhD student at Renmin University of China, advised by Prof. Bing Su.
-            I received my bachelor's and master's degrees from Harbin Institute of Technology.
-            My research focuses on reliable and adaptable machine learning under realistic settings,
-            with particular interests in long-tailed learning, representation learning, and AI4Science.
+        <p class="lang-block" data-lang="en">
+            I am currently a postdoctoral researcher at Tsinghua University, working with
+            Prof. <a href="https://www.au.tsinghua.edu.cn/en/info/1080/3320.htm">Xiangyang Ji</a>.
+            I received my Ph.D. from Renmin University of China under the supervision of
+            Prof. <a href="https://ai.ruc.edu.cn/english/FACULTYn/BingSu/index.htm">Bing Su</a>.
+            Before that, I earned my M.S. and B.S. degrees from Harbin Institute of Technology,
+            where I was advised by Prof. <a href="https://homepage.hit.edu.cn/wurui">Rui Wu</a> during my master's study.
+            My research interests lie in reliable and adaptable machine learning under realistic settings,
+            with a particular focus on long-tailed learning, representation learning, and AI4Science.
+        </p>
+        <p class="lang-block lang-hidden" data-lang="zh">
+            我目前是清华大学博士后研究员，合作导师为
+            <a href="https://www.au.tsinghua.edu.cn/info/1080/3178.htm">季向阳</a>教授。
+            我在中国人民大学获得博士学位，博士导师为
+            <a href="http://ai.ruc.edu.cn/academicfaculty/szdwn/sb/index.htm">苏冰</a>副教授。
+            此前，我在哈尔滨工业大学先后获得硕士和学士学位，硕士导师为
+            <a href="https://homepage.hit.edu.cn/wurui">吴锐</a>副教授。
+            我的研究聚焦于真实场景下可靠且具有适应性的机器学习，主要关注长尾学习、表征学习与科学智能。
         </p>
         <p>
-            <a href="mailto:nicelemon666@gmail.com">Email</a> /
+            <a href="mailto:nicelemon666@gmail.com"><span data-en="Email" data-zh="邮箱">Email</span></a> /
             <a href="https://github.com/jiahaochen1">GitHub</a>
         </p>
     </div>
 </div>
 
+<!-- ================= Collaboration ================= -->
+
+<div class="section collaboration">
+<h2 data-en="Collaboration" data-zh="合作交流">Collaboration</h2>
+<p class="lang-block" data-lang="en">
+    I am always open to research collaborations and discussions. Please feel free to
+    <a href="mailto:nicelemon666@gmail.com">drop me an email</a> if you are interested in working together.
+</p>
+<p class="lang-block lang-hidden" data-lang="zh">
+    欢迎围绕相关研究方向开展合作与交流。如果你有兴趣一起研究，欢迎随时
+    <a href="mailto:nicelemon666@gmail.com">给我发邮件</a>。
+</p>
+</div>
+
 <!-- ================= Publications ================= -->
 
 <div class="section">
-<h2>Publications</h2>
+<h2 data-en="Publications" data-zh="论文发表">Publications</h2>
 
-<h3>Computer Vision</h3>
+<h3 data-en="AI for Science" data-zh="科学智能">AI for Science</h3>
 <ul class="pub-list">
 
-<li class="pub-item" data-thumb="IJCV.png" data-paper="">
+<li class="pub-item" data-thumb="assets/images/publications/icml2026.png">
+    <div class="pub-thumb"></div>
+    <div class="pub-content">
+        <div class="pub-title">From Holo Pockets to Electron Density: GPT-style Drug Design with Density</div>
+        <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Letian Gao, Yanhao Zhu, Wenbiao Zhou, Bing Su, Zhi John Lu, Bo Huang</div>
+        <div class="pub-venue">
+            <span data-en="International Conference on Machine Learning (ICML), 2026" data-zh="国际机器学习大会（ICML），2026">International Conference on Machine Learning (ICML), 2026</span>
+             <a href="https://arxiv.org/abs/2605.08767">PDF</a>
+        </div>
+    </div>
+</li>
+
+<li class="pub-item" data-thumb="assets/images/publications/iclr2025.png" data-paper="https://openreview.net/forum?id=ym7pr83XQr">
+    <div class="pub-thumb"></div>
+    <div class="pub-content">
+        <div class="pub-title">DenoiseVAE: Learning Molecule-Adaptive Noise Distributions for Denoising-based 3D Molecular Pre-training</div>
+        <div class="pub-authors">Yurou Liu, <span class="author-bold">Jiahao Chen</span>, Rui Jiao, Jiangmeng Li, Wenbing Huang, Bing Su</div>
+        <div class="pub-venue">
+            <span data-en="International Conference on Learning Representations (ICLR), 2025" data-zh="国际学习表征会议（ICLR），2025">International Conference on Learning Representations (ICLR), 2025</span>
+            <a href="https://openreview.net/forum?id=ym7pr83XQr">PDF</a>
+        </div>
+    </div>
+</li>
+
+</ul>
+
+<h3 data-en="Computer Vision" data-zh="计算机视觉">Computer Vision</h3>
+<ul class="pub-list">
+
+<li class="pub-item" data-thumb="assets/images/publications/ijcv.png" data-paper="">
     <div class="pub-thumb"></div>
     <div class="pub-content">
         <div class="pub-title">Uniformity Preserving Transfer for Visual Prompt Tuning under Imbalanced Distribution</div>
         <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Hao Chen, Bin Qin, Jiangmeng Li, Jindong Wang, Bing Su</div>
-        <div class="pub-venue">International Journal of Computer Vision (IJCV), 2026
+        <div class="pub-venue"><span data-en="International Journal of Computer Vision (IJCV), 2026" data-zh="国际计算机视觉期刊（IJCV），2026">International Journal of Computer Vision (IJCV), 2026</span>
             <a href="https://link.springer.com/article/10.1007/s11263-025-02712-z">PDF</a>
         </div>
     </div>
 </li>
 
-<li class="pub-item" data-thumb="ICML2025.png" data-paper="https://arxiv.org/abs/2501.15955">
+<li class="pub-item" data-thumb="assets/images/publications/icml2025.png" data-paper="https://arxiv.org/abs/2501.15955">
     <div class="pub-thumb"></div>
     <div class="pub-content">
         <div class="pub-title">Rethinking the Bias of Foundation Model under Long-tailed Distribution</div>
         <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Bin Qin, Jiangmeng Li, Hao Chen, Bing Su</div>
         <div class="pub-venue">
-            International Conference on Machine Learning (ICML), 2025
+            <span data-en="International Conference on Machine Learning (ICML), 2025" data-zh="国际机器学习大会（ICML），2025">International Conference on Machine Learning (ICML), 2025</span>
             <a href="https://arxiv.org/abs/2501.15955">PDF</a>
         </div>
     </div>
 </li>
 
-<li class="pub-item" data-thumb="TIP.png" data-paper="">
+<li class="pub-item" data-thumb="assets/images/publications/tip.png" data-paper="">
     <div class="pub-thumb"></div>
     <div class="pub-content">
         <div class="pub-title">Instance-specific and Semantic Augmentation for Long-tailed Image Classification</div>
         <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Bing Su</div>
         <div class="pub-venue">
-            IEEE Transactions on Image Processing (TIP), 2024
+            <span data-en="IEEE Transactions on Image Processing (TIP), 2024" data-zh="IEEE 图像处理汇刊（TIP），2024">IEEE Transactions on Image Processing (TIP), 2024</span>
             <a href="https://ieeexplore.ieee.org/document/10480367/">PDF</a>
         </div>
     </div>
@@ -250,19 +539,19 @@ footer {
         <div class="pub-title">Domain-Adaptive and Subgroup-Specific Cascaded Temperature Regression for Out-of-Distribution Calibration</div>
         <div class="pub-authors">Jiexin Wang, <span class="author-bold">Jiahao Chen</span>, Bing Su</div>
         <div class="pub-venue">
-            IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024
+            <span data-en="IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024" data-zh="IEEE 国际声学、语音与信号处理会议（ICASSP），2024">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024</span>
             <a href="https://ieeexplore.ieee.org/document/10446995">PDF</a>
         </div>
     </div>
 </li>
 
-<li class="pub-item" data-thumb="cvpr2023.png" data-paper="">
+<li class="pub-item" data-thumb="assets/images/publications/cvpr2023.png" data-paper="">
     <div class="pub-thumb"></div>
     <div class="pub-content">
         <div class="pub-title">Transfer Knowledge from Head to Tail: Uncertainty Calibration under Long-tailed Distribution</div>
         <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Bing Su</div>
         <div class="pub-venue">
-            IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023
+            <span data-en="IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023" data-zh="IEEE/CVF 计算机视觉与模式识别会议（CVPR），2023">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</span>
             <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Chen_Transfer_Knowledge_From_Head_to_Tail_Uncertainty_Calibration_Under_Long-Tailed_CVPR_2023_paper.html">PDF</a>
         </div>
     </div>
@@ -274,7 +563,7 @@ footer {
         <div class="pub-title">Toward Auto-evaluation with Confidence-based Category Relation-aware Regression</div>
         <div class="pub-authors">Jiexin Wang, <span class="author-bold">Jiahao Chen</span>, Bing Su</div>
         <div class="pub-venue">
-            IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023
+            <span data-en="IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023" data-zh="IEEE 国际声学、语音与信号处理会议（ICASSP），2023">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023</span>
             <a href="https://ieeexplore.ieee.org/document/10095211">PDF</a>
         </div>
     </div>
@@ -282,28 +571,34 @@ footer {
 
 </ul>
 
-<h3>AI4Science</h3>
+</div>
+
+<!-- ================= Under Review ================= -->
+
+<div class="section">
+<h2 data-en="Under Review" data-zh="审稿中">Under Review</h2>
 <ul class="pub-list">
 
-<li class="pub-item" data-thumb="icml2026.png">
+<li class="pub-item" data-paper="https://arxiv.org/abs/2506.02497">
     <div class="pub-thumb"></div>
     <div class="pub-content">
-        <div class="pub-title">From Holo Pockets to Electron Density: GPT-style Drug Design with Density</div>
-        <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Letian Gao, Yanhao Zhu, Wenbiao Zhou, Bing Su, Zhi John Lu, Bo Huang</div>
+        <div class="pub-title">LumosFlow: Motion-Guided Long Video Generation</div>
+        <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Hangjie Yuan, Yichen Qian, Jingyun Liang, Jiazheng Xing, Pengwei Liu, Weihua Chen, Fan Wang, Bing Su</div>
         <div class="pub-venue">
-            International Conference on Machine Learning (ICML), 2026
+            <span data-en="Under Review" data-zh="审稿中">Under Review</span>
+            <a href="https://arxiv.org/abs/2506.02497">PDF</a>
         </div>
     </div>
 </li>
 
-<li class="pub-item" data-thumb="iclr2025.png" data-paper="https://openreview.net/forum?id=ym7pr83XQr">
+<li class="pub-item" data-paper="https://arxiv.org/abs/2604.03687v2">
     <div class="pub-thumb"></div>
     <div class="pub-content">
-        <div class="pub-title">DenoiseVAE: Learning Molecule-Adaptive Noise Distributions for Denoising-based 3D Molecular Pre-training</div>
-        <div class="pub-authors">Yurou Liu, <span class="author-bold">Jiahao Chen</span>, Rui Jiao, Jiangmeng Li, Wenbing Huang, Bing Su</div>
+        <div class="pub-title">SciLT: Long-tailed Image Classification under Scientific Image Domains</div>
+        <div class="pub-authors"><span class="author-bold">Jiahao Chen</span>, Bing Su</div>
         <div class="pub-venue">
-            International Conference on Learning Representations (ICLR), 2025
-            <a href="https://openreview.net/forum?id=ym7pr83XQr">PDF</a>
+            <span data-en="Under Review" data-zh="审稿中">Under Review</span>
+            <a href="https://arxiv.org/abs/2604.03687v2">PDF</a>
         </div>
     </div>
 </li>
@@ -311,12 +606,52 @@ footer {
 </ul>
 </div>
 
+<!-- ================= Education ================= -->
+
+<div class="section">
+<h2 data-en="Education" data-zh="教育经历">Education</h2>
+<ul class="education-list">
+    <li class="education-item">
+        <img src="assets/images/logos/hit-logo.png" alt="Harbin Institute of Technology logo" class="education-logo">
+        <div>
+            <div class="education-school" data-en="Harbin Institute of Technology" data-zh="哈尔滨工业大学">Harbin Institute of Technology</div>
+            <div class="education-degree" data-en="Bachelor's Degree" data-zh="学士">Bachelor's Degree</div>
+        </div>
+        <div class="education-date">2016–2020</div>
+    </li>
+    <li class="education-item">
+        <img src="assets/images/logos/hit-logo.png" alt="Harbin Institute of Technology logo" class="education-logo">
+        <div>
+            <div class="education-school" data-en="Harbin Institute of Technology" data-zh="哈尔滨工业大学">Harbin Institute of Technology</div>
+            <div class="education-degree" data-en="Master's Degree" data-zh="硕士">Master's Degree</div>
+        </div>
+        <div class="education-date">2020–2022</div>
+    </li>
+    <li class="education-item">
+        <img src="assets/images/logos/ruc-logo.png" alt="Renmin University of China logo" class="education-logo ruc-logo">
+        <div>
+            <div class="education-school" data-en="Renmin University of China" data-zh="中国人民大学">Renmin University of China</div>
+            <div class="education-degree" data-en="Ph.D." data-zh="博士">Ph.D.</div>
+        </div>
+        <div class="education-date">2022–2026</div>
+    </li>
+    <li class="education-item">
+        <img src="assets/images/logos/tsinghua-logo.svg" alt="Tsinghua University logo" class="education-logo">
+        <div>
+            <div class="education-school" data-en="Tsinghua University" data-zh="清华大学">Tsinghua University</div>
+            <div class="education-degree" data-en="Postdoctoral Researcher" data-zh="博士后研究员">Postdoctoral Researcher</div>
+        </div>
+        <div class="education-date" data-en="2026–Present" data-zh="2026–至今">2026–Present</div>
+    </li>
+</ul>
+</div>
+
 <!-- ================= Services ================= -->
 
 <div class="section services">
-<h2>Academic Services</h2>
-<p>Reviewer for CVPR, ICCV, ICML, ICLR, NeurIPS</p>
-<p>Reviewer for Knowledge-Based Systems (KBS)</p>
+<h2 data-en="Academic Services" data-zh="学术服务">Academic Services</h2>
+<p data-en="Reviewer for CVPR, ICCV, ICML, ICLR, and NeurIPS" data-zh="CVPR、ICCV、ICML、ICLR 和 NeurIPS 审稿人">Reviewer for CVPR, ICCV, ICML, ICLR, and NeurIPS</p>
+<p data-en="Reviewer for Knowledge-Based Systems (KBS)" data-zh="Knowledge-Based Systems（KBS）期刊审稿人">Reviewer for Knowledge-Based Systems (KBS)</p>
 </div>
 
 <footer>
@@ -328,6 +663,35 @@ footer {
 <!-- ================= Thumbnail Loader ================= -->
 
 <script>
+const languageToggle = document.getElementById('language-toggle');
+let currentLanguage = 'en';
+
+function setLanguage(language) {
+    currentLanguage = language;
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.classList.toggle('lang-hidden', block.dataset.lang !== language);
+    });
+
+    document.querySelectorAll('[data-en][data-zh]').forEach(element => {
+        element.textContent = language === 'zh' ? element.dataset.zh : element.dataset.en;
+    });
+
+    languageToggle.textContent = language === 'en' ? '中文' : 'English';
+    languageToggle.setAttribute(
+        'aria-label',
+        language === 'en' ? 'Switch to Chinese' : '切换为英文'
+    );
+    languageToggle.setAttribute('aria-pressed', language === 'zh');
+}
+
+languageToggle.addEventListener('click', () => {
+    setLanguage(currentLanguage === 'en' ? 'zh' : 'en');
+});
+
+setLanguage('en');
+
 document.querySelectorAll('.pub-item').forEach(item => {
     const thumbBox = item.querySelector('.pub-thumb');
     const manualThumb = item.dataset.thumb;
@@ -341,7 +705,7 @@ document.querySelectorAll('.pub-item').forEach(item => {
             thumbBox.appendChild(img);
         };
         img.onerror = () => {
-            // Keep the empty thumbBox for consistent layout
+            thumbBox.innerHTML = '';
         };
         img.src = url;
     }
@@ -366,7 +730,7 @@ document.querySelectorAll('.pub-item').forEach(item => {
         }
     }
 
-    // Keep the empty thumbBox for consistent layout even if no image is loaded
+    // Empty thumbnail boxes are hidden by CSS so the text can use the full card width.
 });
 </script>
 
